@@ -167,6 +167,18 @@ export default function CalculatorPage() {
     "disabled:opacity-50 disabled:cursor-not-allowed",
   ].join(" ");
 
+  const accentButtonBase = [
+    "rounded-md border px-4 py-3 text-lg font-medium",
+    "border-zinc-300",
+    "dark:border-zinc-700",
+    "focus-visible:outline-none focus-visible:ring-2",
+    "bg-orange-600 text-white",
+    "hover:bg-orange-500 hover:text-white active:bg-orange-700",
+    "dark:bg-orange-600 dark:hover:bg-orange-500 dark:active:bg-orange-700",
+    "focus-visible:ring-orange-700",
+    "disabled:opacity-50 disabled:cursor-not-allowed",
+  ].join(" ");
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-md flex-col items-stretch justify-start gap-6 py-10 px-4 bg-white dark:bg-black">
@@ -220,7 +232,7 @@ export default function CalculatorPage() {
             </button>
             <button
               type="button"
-              className={buttonBase}
+              className={accentButtonBase}
               onClick={pressMultiply}
               aria-label="Multiply"
             >
@@ -228,7 +240,7 @@ export default function CalculatorPage() {
             </button>
             <button
               type="button"
-              className={buttonBase}
+              className={accentButtonBase}
               onClick={pressEquals}
               aria-label="Equals"
             >
