@@ -119,6 +119,81 @@ TEMPLATE REVIEW
 
 
 
+Reviewer (AC validation): Ask mode if you just want the review output in chat. Agent mode if you want it saved/updated as a file (e.g., bmad/prompts/reviews/FE-003-keypad-order-and-zero-style.review.md).
+
+
+
+@my-2nd-bmad-app-calculator-mdas
+
+Run BMAD Reviewer for this story.
+
+Use the prompt in this file:
+@bmad/prompts/reviewer.md
+
+Story to review:
+@bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+
+Output the review using the headings only. Do NOT modify files.
+
+
+
+===============================================================
+
+
+
+
+
+PO Acceptance (final approval) — send to AI
+PO Acceptance (final approval): Ask mode for a decision summary in chat. Agent mode if you want a PO decision written to a file or notes.
+
+
+@my-2nd-bmad-app-calculator-mdas
+
+Act as PO. Perform acceptance for FE-003 based on:
+- Story: @bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+- Implementation: @app/calculator/page.tsx
+- Reviewer results: @bmad/prompts/reviews/FE-003-keypad-order-and-zero-style.review.md
+- Create the file @bmad/prompts/po-acceptances/FE-003-keypad-order-and-zero-style.po-acceptance.md
+
+Output only these headings:
+- Decision: Approve / Changes Required
+- Findings: brief notes per AC
+- Required Changes: concrete edits if any (file paths, what to adjust)
+- Notes: optional remarks (perf/a11y/risks)
+
+
+
+
+
+
+===============================================================
+
+
+SM Gate Check (status transition) — send to AI
+SM Gate Check (status transition): Ask mode for the gate-check summary in chat. Agent mode if you want to update status in files (e.g., bmad/BMAD-NOTES.tsx) or persist artifacts.
+
+
+@my-2nd-bmad-app-calculator-mdas
+
+Act as SM. Gate check FE-003 from Reviewer → PO → Done.
+
+Inputs:
+- Story: @bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+- Implementation: @app/calculator/page.tsx
+- Reviewer results: @bmad/prompts/reviews/FE-003-keypad-order-and-zero-style.review.md
+- PO decision (paste result if available)
+
+Output only:
+- Gate Check: Pass / Blocked
+- Risks/Blockers
+- Actions (who/what)
+- Status Update (e.g., Approved → InProgress → Done)
+
+
+
+
+===============================================================
+
 Option A: ASK mode (manual save)
 Run Reviewer and copy/paste the output into your review file.
 
