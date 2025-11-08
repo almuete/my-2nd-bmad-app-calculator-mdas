@@ -5,7 +5,7 @@
 - Keyboard input: pressing `0` inserts `0` like other digits: Pass
 - A11y: focus ring and aria-label for `0` matches others: Pass
 - No CLS when changing/pressing `0`: Pass
-- Axe devtools reports 0 critical a11y violations: Needs attention (run Axe to confirm)
+- Axe devtools reports 0 critical a11y violations: Pass (see `bmad/prompts/reviews/artifacts/FE-003-keypad-order-and-zero-style.axe-proof.md`)
 
 ## 2) Accessibility Review (concrete, testable)
 - Digit buttons have `aria-label="Digit X"`; focus-visible ring present; logical tab order via DOM.

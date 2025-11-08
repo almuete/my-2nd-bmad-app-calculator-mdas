@@ -4,11 +4,11 @@
 - None identified.
 
 ## Actions
-- Dev → Attach Axe run (0 critical issues) screenshot/log to PR → Before merge
-- Dev → Reference reviewer and PO files in PR description → Before merge
-- Maintainer → Merge PR and tag FE-003 as Done → After Axe proof attached
+- Dev → Reference reviewer, PO, and Axe proof files in PR description → Done
+- Artifact → `bmad/prompts/reviews/artifacts/FE-003-keypad-order-and-zero-style.axe-proof.md`
+- Maintainer → Tag FE-003 as Done
 
 ## Status Update
-- Approved → InProgress → Review → Done
+- Done
 
 
