@@ -131,10 +131,10 @@ Use the prompt in this file:
 @bmad/prompts/reviewer.md
 
 Story to review:
-@bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+@bmad/stories/FE-004-clear-button-style.story.md
 
 Output the review using the headings only. Do NOT modify files.
-
+Create the file results @bmad/prompts/reviews/FE-004-clear-button-style.review.md
 
 
 ===============================================================
@@ -149,11 +149,11 @@ PO Acceptance (final approval): Ask mode for a decision summary in chat. Agent m
 
 @my-2nd-bmad-app-calculator-mdas
 
-Act as PO. Perform acceptance for FE-003 based on:
-- Story: @bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+Act as PO. Perform acceptance for FE-004 based on:
+- Story: @bmad/stories/FE-004-clear-button-style.story.md
 - Implementation: @app/calculator/page.tsx
-- Reviewer results: @bmad/prompts/reviews/FE-003-keypad-order-and-zero-style.review.md
-- Create the file @bmad/prompts/po-acceptances/FE-003-keypad-order-and-zero-style.po-acceptance.md
+- Reviewer results: @bmad/prompts/reviews/FE-004-clear-button-style.review.md
+- Create the file @bmad/prompts/po-acceptances/FE-004-clear-button-style.story.po.acceptance.md
 
 Output only these headings:
 - Decision: Approve / Changes Required
@@ -175,13 +175,14 @@ SM Gate Check (status transition): Ask mode for the gate-check summary in chat. 
 
 @my-2nd-bmad-app-calculator-mdas
 
-Act as SM. Gate check FE-003 from Reviewer → PO → Done.
+Act as SM. Gate check FE-004 from Reviewer → PO → Done.
 
 Inputs:
-- Story: @bmad/stories/FE-003-keypad-order-and-zero-style.story.md
+- Story: @bmad/stories/FE-004-clear-button-style.story.md
 - Implementation: @app/calculator/page.tsx
-- Reviewer results: @bmad/prompts/reviews/FE-003-keypad-order-and-zero-style.review.md
-- PO decision (paste result if available)
+- Reviewer results: @bmad/prompts/reviews/FE-004-clear-button-style.review.md
+- Create the file results @bmad/prompts/sm-gates/FE-004-clear-button-style.story.sm.gate.md
+- PO decision @bmad/prompts/po-acceptances/FE-004-clear-button-style.story.po.acceptance.md
 
 Output only:
 - Gate Check: Pass / Blocked
