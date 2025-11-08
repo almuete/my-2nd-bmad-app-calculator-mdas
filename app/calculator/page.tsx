@@ -231,7 +231,7 @@ export default function CalculatorPage() {
               .
             </button>
 
-            {["7", "8", "9", "4", "5", "6", "1", "2", "3"].map((d) => (
+            {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((d) => (
               <button
                 key={d}
                 type="button"
@@ -243,14 +243,6 @@ export default function CalculatorPage() {
               </button>
             ))}
 
-            <button
-              type="button"
-              className={`${buttonBase} col-span-2`}
-              onClick={() => appendDigit("0")}
-              aria-label="Digit 0"
-            >
-              0
-            </button>
             <div aria-hidden="true" />
             <div aria-hidden="true" />
           </div>

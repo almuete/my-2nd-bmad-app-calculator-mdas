@@ -112,7 +112,7 @@ TEMPLATE REVIEW
    @bmad/prompts/reviewer.md
 
    Story to review:
-   @bmad/stories/FE-002-calculator-ui.story.md
+   @bmad/stories/FE-003-keypad-order-and-zero-style.story.md
 
    ➡️ Output the review using the headings only. Do NOT modify files.
 
