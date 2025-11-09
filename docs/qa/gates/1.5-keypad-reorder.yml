@@ -1,15 +1,15 @@
 schema: 1
 story: "1.5"
 story_title: "Keypad Reorder and Dot Position"
-gate: "PENDING"
-status_reason: "Awaiting unit test verification and visual snapshot updates."
+gate: "PASS"
+status_reason: "All ACs verified: 4-column grid; digits 9..0 left-to-right, top-to-bottom; '.' rendered immediately right of '0'; ARIA labels accurate; DOM/tab order matches visual; unit tests pass; Playwright visual snapshots updated (Desktop & Mobile)."
 reviewer: "Quinn (Test Architect)"
 updated: "2025-11-09T00:00:00Z"
 waiver:
   active: false
 top_issues: []
 evidence:
-  tests_reviewed: 0
+  tests_reviewed: 3
   risks_identified: 0
   references:
     - "components/calculator/Keypad.tsx"

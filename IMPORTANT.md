@@ -8,3 +8,8 @@ I have new task from the client what BMAD command should I run first?
   - After drafting the story: *execute-checklist story-draft-checklist.md → *execute-checklist story-dod-checklist.md
   - For larger initiatives/PRDs: *document-project or *create-doc prd-tmpl.yaml
   - Want me to run *advanced-elicitation now?
+
+
+Creating new task
+
+    @bmad-master.mdc *task {advanced-elicitation}
