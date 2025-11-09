@@ -1,6 +1,10 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
+import Display from "../../components/calculator/Display";
+import ActionBar from "../../components/calculator/ActionBar";
+import OperatorPad from "../../components/calculator/OperatorPad";
+import Keypad from "../../components/calculator/Keypad";
 
 function parseFiniteNumber(value: string): number | null {
   const trimmed = value.trim();
@@ -178,6 +182,7 @@ export default function CalculatorPage() {
     "focus-visible:ring-orange-700",
     "disabled:opacity-50 disabled:cursor-not-allowed",
   ].join(" ");
+  
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -188,31 +193,16 @@ export default function CalculatorPage() {
           </h1>
         </header>
 
-        <section
-          className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800"
-          aria-labelledby="display-heading"
-        >
-          <h2 id="display-heading" className="sr-only">
-            Display
-          </h2>
-          <div
-            className="min-h-5 text-right text-sm text-zinc-600 dark:text-zinc-400"
-            aria-live="off"
-          >
-            {expression}
-          </div>
-          <div className="mt-1 min-h-10 select-none text-right text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            {displayValue}
-          </div>
-          <div
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-            className="sr-only"
-          >
-            {announcement}
-          </div>
-        </section>
+        <Display
+          expression={expression}
+          result={displayValue}
+          announcement={announcement}
+          ariaLabels={{
+            region: "Calculator display",
+            expression: "Current expression",
+            result: "Current result",
+          }}
+        />
 
         <section
           className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800"
@@ -221,54 +211,14 @@ export default function CalculatorPage() {
           <h2 id="keypad-heading" className="sr-only">
             Keypad
           </h2>
-          <div className="grid grid-cols-4 gap-3">
-            <button
-              type="button"
-              className={clearButtonBase}
-              onClick={pressClear}
-              aria-label="Clear"
-            >
-              C
-            </button>
-            <button
-              type="button"
-              className={accentButtonBase}
-              onClick={pressMultiply}
-              aria-label="Multiply"
-            >
-              ×
-            </button>
-            <button
-              type="button"
-              className={accentButtonBase}
-              onClick={pressEquals}
-              aria-label="Equals"
-            >
-              =
-            </button>
-            <button
-              type="button"
-              className={buttonBase}
-              onClick={appendDot}
-              aria-label="Decimal point"
-            >
-              .
-            </button>
-
-            {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map((d) => (
-              <button
-                key={d}
-                type="button"
-                className={buttonBase}
-                onClick={() => appendDigit(d)}
-                aria-label={`Digit ${d}`}
-              >
-                {d}
-              </button>
-            ))}
-
-            <div aria-hidden="true" />
-            <div aria-hidden="true" />
+          <div className="flex flex-col gap-4">
+            <ActionBar
+              onClear={pressClear}
+              onBackspace={pressBackspace}
+              onEquals={pressEquals}
+            />
+            <OperatorPad onMultiply={pressMultiply} />
+            <Keypad onDigit={appendDigit} onDot={appendDot} />
           </div>
         </section>
       </main>

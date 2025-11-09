@@ -1,0 +1,61 @@
+import { render, screen, fireEvent } from "@testing-library/react";
+import React from "react";
+import Key from "../components/calculator/Key";
+import Keypad from "../components/calculator/Keypad";
+import OperatorPad from "../components/calculator/OperatorPad";
+import ActionBar from "../components/calculator/ActionBar";
+
+describe("Key component", () => {
+  it("invokes onPress when clicked", () => {
+    const onPress = vi.fn();
+    render(<Key label="1" ariaLabel="Digit 1" onPress={onPress} variant="number" />);
+    fireEvent.click(screen.getByLabelText("Digit 1"));
+    expect(onPress).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("Keypad", () => {
+  it("renders digits and dot and calls callbacks", () => {
+    const onDigit = vi.fn();
+    const onDot = vi.fn();
+    render(<Keypad onDigit={onDigit} onDot={onDot} />);
+
+    fireEvent.click(screen.getByLabelText("Decimal point"));
+    expect(onDot).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(screen.getByLabelText("Digit 7"));
+    expect(onDigit).toHaveBeenCalledWith("7");
+  });
+});
+
+describe("OperatorPad", () => {
+  it("calls multiply on press", () => {
+    const onMultiply = vi.fn();
+    render(<OperatorPad onMultiply={onMultiply} />);
+    fireEvent.click(screen.getByLabelText("Multiply"));
+    expect(onMultiply).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("ActionBar", () => {
+  it("calls clear, backspace, equals", () => {
+    const onClear = vi.fn();
+    const onBackspace = vi.fn();
+    const onEquals = vi.fn();
+    render(
+      <ActionBar
+        onClear={onClear}
+        onBackspace={onBackspace}
+        onEquals={onEquals}
+      />
+    );
+    fireEvent.click(screen.getByLabelText("Clear"));
+    fireEvent.click(screen.getByLabelText("Backspace"));
+    fireEvent.click(screen.getByLabelText("Equals"));
+    expect(onClear).toHaveBeenCalledTimes(1);
+    expect(onBackspace).toHaveBeenCalledTimes(1);
+    expect(onEquals).toHaveBeenCalledTimes(1);
+  });
+});
+
+

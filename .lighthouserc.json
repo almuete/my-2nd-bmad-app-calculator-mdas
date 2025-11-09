@@ -1,0 +1,28 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "${STAGING_URL}/",
+        "${STAGING_URL}/calculator"
+      ],
+      "numberOfRuns": 1,
+      "settings": {
+        "preset": "desktop"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:accessibility": ["warn", { "minScore": 0.95 }],
+        "categories:performance": "off",
+        "categories:best-practices": "off",
+        "categories:seo": "off"
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": ".lighthouse"
+    }
+  }
+}
+
+
