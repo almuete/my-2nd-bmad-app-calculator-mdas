@@ -1,0 +1,25 @@
+spectrum: 1
+story: "1.6"
+story_title: "Digit keys cyan background"
+gate: "CONCERNS"
+status_reason: "Digits (0–9) and decimal correctly use cyan scheme and cyan focus ring; operators/actions remain blue. However, base state uses bg-cyan-500 with text-white which likely fails WCAG 2.1 AA 4.5:1 contrast for body-sized text, risking Lighthouse a11y <95. Recommend either darkening the base cyan (e.g., bg-cyan-700) or switching text color to a dark foreground on bg-cyan-500, then update hover/active tokens and tests."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-11-09T00:00:00Z"
+waiver:
+  active: false
+top_issues:
+  - "Contrast concern: bg-cyan-500 + text-white likely <4.5:1 (AA) for normal text."
+  - "Lighthouse a11y ≥95 cannot be guaranteed until contrast is corrected and validated."
+evidence:
+  tests_reviewed: 1
+  risks_identified: 1
+  references:
+    - "components/calculator/Key.tsx"
+    - "components/calculator/Keypad.tsx"
+    - "tests/KeypadComponents.test.tsx"
+    - "docs/stories/1.6.digit-keys-cyan-background.md"
+  trace:
+    ac_covered: [1, 2, 3, 5]
+    ac_gaps: [4]
+
+

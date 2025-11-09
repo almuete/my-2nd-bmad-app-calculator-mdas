@@ -27,7 +27,7 @@ export function Key({
   ].join(" ");
   const schemeByVariant: Record<KeyVariant, string> = {
     number:
-      "border-zinc-300/60 bg-white/40 text-zinc-900 dark:border-white/10 dark:bg-white/10 dark:text-zinc-100 hover:bg-white/50 active:bg-white/60 dark:hover:bg-white/15 dark:active:bg-white/20 focus-visible:ring-blue-600",
+      "bg-cyan-500 text-white hover:bg-cyan-600 active:bg-cyan-700 focus-visible:ring-cyan-600",
     operator:
       "border-blue-300/60 bg-blue-500/20 text-blue-900 dark:border-blue-400/20 dark:bg-blue-400/10 dark:text-blue-100 hover:bg-blue-500/30 active:bg-blue-600/30 dark:hover:bg-blue-400/20 dark:active:bg-blue-500/25 focus-visible:ring-blue-600",
     action:

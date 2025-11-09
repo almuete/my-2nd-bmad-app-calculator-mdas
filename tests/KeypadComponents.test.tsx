@@ -26,6 +26,30 @@ describe("Keypad", () => {
     fireEvent.click(screen.getByLabelText("Digit 7"));
     expect(onDigit).toHaveBeenCalledWith("7");
   });
+
+  it("applies cyan styles to digits and decimal", () => {
+    const onDigit = vi.fn();
+    const onDot = vi.fn();
+    render(<Keypad onDigit={onDigit} onDot={onDot} />);
+
+    const digit = screen.getByLabelText("Digit 7");
+    const dot = screen.getByLabelText("Decimal point");
+    const zero = screen.getByLabelText("Digit 0");
+
+    expect(digit).toHaveClass("bg-cyan-500");
+    expect(digit).toHaveClass("text-white");
+    expect(digit).toHaveClass("hover:bg-cyan-600");
+    expect(digit).toHaveClass("active:bg-cyan-700");
+    expect(digit).toHaveClass("focus-visible:ring-cyan-600");
+
+    expect(dot).toHaveClass("bg-cyan-500");
+    expect(dot).toHaveClass("text-white");
+    expect(dot).toHaveClass("hover:bg-cyan-600");
+    expect(dot).toHaveClass("active:bg-cyan-700");
+    expect(dot).toHaveClass("focus-visible:ring-cyan-600");
+
+    expect(zero).toHaveClass("bg-cyan-500");
+  });
 });
 
 describe("OperatorPad", () => {
