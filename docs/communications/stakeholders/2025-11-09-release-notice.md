@@ -9,6 +9,7 @@ We completed Epic 1 for the Calculator UI modernization. This release delivers:
 - Componentized keypad with clear grouping for actions and operator keys
 - Preserves existing MDAS logic (multiplication-focused)
 - Calculator button glassmorphism refresh: neutral glass numeric keys; blue-tinted operator/action; stronger focus visibility
+- Keypad layout updated to descending order (9→0) with decimal to the right of 0
 
 ## Links
 - Epic Summary: docs/epics/epic-1.md
@@ -16,10 +17,12 @@ We completed Epic 1 for the Calculator UI modernization. This release delivers:
 - Story 1.1: docs/stories/1.1.dual-line-display.md (Gate: docs/qa/gates/1.1-dual-line-display.yml)
 - Story 1.2: docs/stories/1.2.keypad-and-actions.md (Gate: docs/qa/gates/1.2-keypad-and-actions.yml)
 - Story 1.4: docs/stories/1.4.calculator-buttons-glassmorphism-refresh.md (Gate: docs/qa/gates/1.4-glassmorphism-refresh.yml)
+ - Story 1.5: docs/stories/1.5.keypad-reorder-and-dot-position.md (Gate: docs/qa/gates/1.5-keypad-reorder.yml)
 
 ## Quality & Accessibility
 - Unit tests added for display, keypad interactions, and verified after button refresh
 - QA Gates: PASS for stories 1.1, 1.2, and 1.4
+- QA Gate: PASS for story 1.5 (keypad reorder & decimal position)
 - Visual regression recommended via Percy/Chromatic or Playwright; Lighthouse a11y ≥95 in CI
 
 ## Impacted Components

@@ -8,21 +8,15 @@ export function Keypad(props: {
   onDot: () => void;
 }) {
   const { onDigit, onDot } = props;
-  const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  // Descending order 9 → 0 per client request
+  const digits = ["9", "8", "7", "6", "5", "4", "3", "2", "1", "0"];
   return (
     <div
       className="grid grid-cols-4 gap-3"
       role="group"
       aria-label="Numeric keypad"
     >
-      {/* Dot key */}
-      <Key
-        label="."
-        ariaLabel="Decimal point"
-        onPress={onDot}
-        variant="number"
-      />
-      {/* Render digits */}
+      {/* Render digits 9..0 */}
       {digits.map((d) => (
         <Key
           key={d}
@@ -32,8 +26,14 @@ export function Keypad(props: {
           variant="number"
         />
       ))}
-      {/* Spacers for layout balance if needed */}
-      <div aria-hidden="true" />
+      {/* Place decimal point to the right of 0 in the final row */}
+      <Key
+        label="."
+        ariaLabel="Decimal point"
+        onPress={onDot}
+        variant="number"
+      />
+      {/* Spacer to complete the 4-column grid row */}
       <div aria-hidden="true" />
     </div>
   );
