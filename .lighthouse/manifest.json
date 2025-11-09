@@ -1,0 +1,14 @@
+[
+  {
+    "url": "http://localhost:3000/calculator",
+    "isRepresentativeRun": true,
+    "htmlPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_04_41_49.report.html",
+    "jsonPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_04_41_49.report.json",
+    "summary": {
+      "performance": 0.98,
+      "accessibility": 0.95,
+      "best-practices": 1,
+      "seo": 1
+    }
+  }
+]

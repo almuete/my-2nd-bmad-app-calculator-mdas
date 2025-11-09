@@ -25,9 +25,9 @@ export function Key({
     number:
       "border-zinc-300 bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 focus-visible:ring-blue-500",
     operator:
-      "border-zinc-300 bg-orange-600 text-white dark:border-zinc-700 dark:bg-orange-600 dark:text-white hover:bg-orange-500 active:bg-orange-700 dark:hover:bg-orange-500 dark:active:bg-orange-700 focus-visible:ring-orange-700",
+      "border-zinc-300 bg-blue-600 text-white dark:border-zinc-700 dark:bg-blue-600 dark:text-white hover:bg-blue-500 active:bg-blue-700 dark:hover:bg-blue-500 dark:active:bg-blue-700 focus-visible:ring-blue-700",
     action:
-      "border-zinc-300 bg-orange-600 text-white dark:border-zinc-700 dark:bg-orange-600 dark:text-white hover:bg-orange-500 active:bg-orange-700 dark:hover:bg-orange-500 dark:active:bg-orange-700 focus-visible:ring-orange-700",
+      "border-zinc-300 bg-blue-600 text-white dark:border-zinc-700 dark:bg-blue-600 dark:text-white hover:bg-blue-500 active:bg-blue-700 dark:hover:bg-blue-500 dark:active:bg-blue-700 focus-visible:ring-blue-700",
   };
   const className = `${base} ${schemeByVariant[variant]}`;
   return (
