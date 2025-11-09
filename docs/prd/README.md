@@ -12,4 +12,7 @@ Sections:
 - [6. Risks](./06-risks.md)
 - [7. Acceptance Criteria](./07-acceptance-criteria.md)
 
+### Shards (Change Requests)
+- [Shard 1.6 — Digit keys cyan background](./shard-1.6-digit-keys-cyan-background.md)
+- [Shard 1.7 — Remove shadow and backdrop in calculator display](./shard-1.7-display-no-shadow-and-backdrop.md)
 

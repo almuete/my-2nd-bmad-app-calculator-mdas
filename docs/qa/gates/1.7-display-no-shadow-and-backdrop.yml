@@ -1,0 +1,24 @@
+schema: 1
+story: "1.7"
+story_title: "Display no shadow and backdrop"
+gate: "PASS"
+status_reason: "Display container uses opaque surfaces with no box-shadow or backdrop blur. Contrast verified ≥4.5:1 for expression/result in light and dark. Unit tests assert no shadow/backdrop and preserve ARIA semantics. Visual snapshots updated for Desktop and Mobile Chrome. No changes to MDAS logic, layout, or keyboard support."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-11-09T00:00:00Z"
+waiver:
+  active: false
+top_issues: []
+evidence:
+  tests_reviewed: 2
+  risks_identified: 0
+  references:
+    - "components/calculator/Display.tsx"
+    - "tests/Display.test.tsx"
+    - "tests/visual/calculator.spec.ts"
+    - "tests/visual/calculator.spec.ts-snapshots/"
+    - "docs/stories/1.7.display-no-shadow-and-backdrop.md"
+  trace:
+    ac_covered: [1, 2, 3, 4, 5, 6, 7, 8]
+    ac_gaps: []
+
+

@@ -61,3 +61,15 @@ Acceptance Criteria:
 4) Operators/actions unchanged.
 5) Accessibility score ≥95; text contrast ≥4.5:1.
 
+### Change Request: Remove shadow and backdrop in calculator display
+
+- Title: Remove shadow and backdrop blur from display panel
+- Why: Client prefers a flat, non-glass display for reduced visual noise
+
+Acceptance Criteria:
+1) No box-shadow on the display container.
+2) No backdrop blur (`backdrop-filter` / `backdrop-blur-*`) on the display container.
+3) Display background is opaque and uses the standard surface token (no glass/tint).
+4) Expression/result contrast remains ≥4.5:1 in both light and dark modes.
+5) Visual snapshots updated to reflect the flat display; no unrelated regressions.
+

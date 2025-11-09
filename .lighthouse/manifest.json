@@ -1,11 +1,23 @@
 [
   {
+    "url": "http://localhost:3000/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost--2025_11_09_13_23_09.report.html",
+    "jsonPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost--2025_11_09_13_23_09.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 0.98,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
     "url": "http://localhost:3000/calculator",
     "isRepresentativeRun": true,
-    "htmlPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_04_41_49.report.html",
-    "jsonPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_04_41_49.report.json",
+    "htmlPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_13_23_20.report.html",
+    "jsonPath": "/private/var/www/my-2nd-bmad-app-calculator-mdas/.lighthouse/localhost-calculator-2025_11_09_13_23_20.report.json",
     "summary": {
-      "performance": 0.98,
+      "performance": 0.99,
       "accessibility": 0.95,
       "best-practices": 1,
       "seo": 1

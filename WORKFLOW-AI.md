@@ -2,8 +2,8 @@
 ============ PO ============
 @my-2nd-bmad-app-calculator-mdas @po.mdc execute-checklist-po
 
-Client request: “Add bg-cyan-500 to digits 0–9 and the decimal key.” 
-Confirm scope and priority. Call out any risks (a11y contrast, focus ring) and note what PRD sections must be updated.
+Client request: "Remove shadow and backdrop in calculator display"
+Required PRD updates. Do not apply or request code changes at this stage.
 
 ============ PM ============
 

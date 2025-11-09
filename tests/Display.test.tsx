@@ -31,6 +31,12 @@ describe("Display", () => {
     const expr = screen.getByLabelText("Current expression");
     expect(expr).toHaveAttribute("title", long);
   });
+
+  it("renders display container without shadow or backdrop blur", () => {
+    render(<Display expression="" result="0" />);
+    const container = screen.getByRole("group", { name: "Display" });
+    expect(container.className).not.toMatch(/shadow|backdrop-blur/);
+  });
 });
 
 

@@ -17,7 +17,7 @@ export function Display(props: {
   const { expression, result, announcement = "", ariaLabels } = props;
   return (
     <section
-      className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800 shadow-[0_10px_30px_rgba(0,0,0,.25)] backdrop-blur-[2px] focus-within:ring-2 ring-[#34d399]"
+      className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800 bg-white dark:bg-black focus-within:ring-2 ring-[#34d399]"
       aria-labelledby="display-heading"
       role="group"
       aria-label={ariaLabels?.region ?? "Calculator display"}
