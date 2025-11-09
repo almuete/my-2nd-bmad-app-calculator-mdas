@@ -19,15 +19,19 @@ export function Key({
   variant = "number",
   disabled = false,
 }: KeyProps) {
-  const base =
-    "rounded-md border px-4 py-3 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:cursor-not-allowed";
+  const base = [
+    "rounded-md border px-4 py-3 text-lg font-medium",
+    "transition-colors shadow-sm backdrop-blur-sm",
+    "focus-visible:outline-none focus-visible:ring-2",
+    "disabled:opacity-50 disabled:cursor-not-allowed",
+  ].join(" ");
   const schemeByVariant: Record<KeyVariant, string> = {
     number:
-      "border-zinc-300 bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 focus-visible:ring-blue-500",
+      "border-zinc-300/60 bg-white/40 text-zinc-900 dark:border-white/10 dark:bg-white/10 dark:text-zinc-100 hover:bg-white/50 active:bg-white/60 dark:hover:bg-white/15 dark:active:bg-white/20 focus-visible:ring-blue-600",
     operator:
-      "border-zinc-300 bg-blue-600 text-white dark:border-zinc-700 dark:bg-blue-600 dark:text-white hover:bg-blue-500 active:bg-blue-700 dark:hover:bg-blue-500 dark:active:bg-blue-700 focus-visible:ring-blue-700",
+      "border-blue-300/60 bg-blue-500/20 text-blue-900 dark:border-blue-400/20 dark:bg-blue-400/10 dark:text-blue-100 hover:bg-blue-500/30 active:bg-blue-600/30 dark:hover:bg-blue-400/20 dark:active:bg-blue-500/25 focus-visible:ring-blue-600",
     action:
-      "border-zinc-300 bg-blue-600 text-white dark:border-zinc-700 dark:bg-blue-600 dark:text-white hover:bg-blue-500 active:bg-blue-700 dark:hover:bg-blue-500 dark:active:bg-blue-700 focus-visible:ring-blue-700",
+      "border-blue-300/60 bg-blue-500/20 text-blue-900 dark:border-blue-400/20 dark:bg-blue-400/10 dark:text-blue-100 hover:bg-blue-500/30 active:bg-blue-600/30 dark:hover:bg-blue-400/20 dark:active:bg-blue-500/25 focus-visible:ring-blue-600",
   };
   const className = `${base} ${schemeByVariant[variant]}`;
   return (

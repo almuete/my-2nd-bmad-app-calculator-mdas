@@ -15,11 +15,15 @@ Delivered dual-line display and keypad grid with distinct action keys, aligned w
 - 1.3 Operator/action button color update — Done  
   - Story: docs/stories/1.3.operator-and-action-button-color-update.md  
   - QA Gate: docs/qa/gates/1.3-operator-action-color.yml (PASS)
+- 1.4 Calculator buttons glassmorphism refresh — Done  
+  - Story: docs/stories/1.4.calculator-buttons-glassmorphism-refresh.md  
+  - QA Gate: docs/qa/gates/1.4-glassmorphism-refresh.yml (PASS)
 
 ### Highlights
 - Modern glassy display with responsive typography and aria-live announcements
 - Componentized keypad with clear grouping for action and operator keys
 - Updated operator/action palette to Tailwind blue (600/500/700) with clear focus-visible rings
+- Glassmorphism refresh for calculator buttons: neutral glass numeric keys; blue-tinted operator/action; consistent focus rings
 - Keyboard operability preserved; focus-visible states and ARIA labels
 - Unit tests added for display and keypad interactions
 — Lighthouse accessibility on /calculator: 0.95

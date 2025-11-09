@@ -1,0 +1,22 @@
+schema: 1
+story: "1.4"
+story_title: "Calculator Buttons Glassmorphism Refresh"
+gate: "PASS"
+status_reason: "All ACs met: glassmorphism applied; operator/action use blue-tinted glass, number keys use neutral glass, consistent focus-visible ring-blue-600, labels readable in light/dark, unit tests passing, visual snapshots updated for Desktop and Mobile Chrome."
+reviewer: "Quinn (Test Architect)"
+updated: "2025-11-09T00:00:00Z"
+waiver:
+  active: false
+top_issues: []
+evidence:
+  tests_reviewed: 3
+  risks_identified: 0
+  references:
+    - "components/calculator/Key.tsx"
+    - "tests/visual/calculator.spec.ts-snapshots/"
+    - "test-results/calculator-Calculator-UI-visual-calculator-page-renders-Desktop-Chrome/calculator-desktop-actual.png"
+    - "test-results/calculator-Calculator-UI-visual-calculator-page-renders-Mobile-Chrome/calculator-desktop-actual.png"
+  trace:
+    ac_covered: [1, 2, 3, 4, 5]
+    ac_gaps: []
+
