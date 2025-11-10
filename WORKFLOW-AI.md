@@ -1,6 +1,5 @@
-
-============ PO ============
-@my-2nd-bmad-app-calculator-mdas @po.mdc execute-checklist-po
+============ PO ============ AGENT ALWAYS ASK NOT TO BUILD OR DO THE ANY CODE
+@my-2nd-bmad-app-calculator-mdas @po.mdc \*execute-checklist-po
 
 Client request: "Remove shadow and backdrop in calculator display"
 Required PRD updates. Do not apply or request code changes at this stage.
@@ -14,14 +13,14 @@ Update docs/prd/prd-generated.md to add this change:
 Title: Cyan background for digit and decimal keys
 Why: Better visual grouping for numbers
 Acceptance Criteria:
-1) Digits 0–9 and decimal use bg-cyan-500 with white text.
-2) Hover: bg-cyan-600, Active: bg-cyan-700.
-3) Focus ring uses focus-visible:ring-cyan-600.
-4) Operators/actions unchanged.
-5) Accessibility score ≥95; text contrast ≥4.5:1.
+
+1. Digits 0–9 and decimal use bg-cyan-500 with white text.
+2. Hover: bg-cyan-600, Active: bg-cyan-700.
+3. Focus ring uses focus-visible:ring-cyan-600.
+4. Operators/actions unchanged.
+5. Accessibility score ≥95; text contrast ≥4.5:1.
 
 Then shard the PRD if needed so SM can draft the story.
-
 
 ============ SM ============
 
@@ -33,13 +32,15 @@ Story:
 As a calculator user, I want digit keys (0–9) and the decimal key to have a cyan background so they’re visually distinct.
 
 Acceptance Criteria:
-1) Digits 0–9 and decimal have bg-cyan-500 + text-white.
-2) Hover: bg-cyan-600; Active: bg-cyan-700; Focus ring: focus-visible:ring-cyan-600.
-3) Operators/actions remain unchanged.
-4) Accessibility ≥95 Lighthouse; contrast ≥4.5:1.
-5) Unit tests assert cyan class on digits and decimal; visual snapshots updated.
+
+1. Digits 0–9 and decimal have bg-cyan-500 + text-white.
+2. Hover: bg-cyan-600; Active: bg-cyan-700; Focus ring: focus-visible:ring-cyan-600.
+3. Operators/actions remain unchanged.
+4. Accessibility ≥95 Lighthouse; contrast ≥4.5:1.
+5. Unit tests assert cyan class on digits and decimal; visual snapshots updated.
 
 Tasks:
+
 - Update number variant styling in components/calculator/Key.tsx only.
 - Verify Keypad digits (9→0) and decimal inherit cyan.
 - Add minimal tests in tests/KeypadComponents.test.tsx for cyan classes.
@@ -47,10 +48,9 @@ Tasks:
 
 Set Status: Approved after PO review.
 
-
 ============ DEV ============
 
-@dev.mdc *develop-story @1.6.digit-keys-cyan-background.md 
+@dev.mdc \*develop-story @1.6.digit-keys-cyan-background.md
 
 Implement the story by changing only the “number” variant in components/calculator/Key.tsx to:
 bg-cyan-500 text-white hover:bg-cyan-600 active:bg-cyan-700 focus-visible:ring-cyan-600
@@ -61,15 +61,14 @@ Add tests in tests/KeypadComponents.test.tsx to assert bg-cyan-500 on e.g. “Di
 
 Run tests and lint; when all pass, mark the story “Ready for Review”.
 
-
 ============ QA - REVIEW ============
 
-@qa.mdc  sure update the status @1.6.digit-keys-cyan-background.md 
+@qa.mdc sure update the status @1.6.digit-keys-cyan-background.md
 
 Review the final implementation. Confirm digits and decimal use cyan, operators/actions unchanged, focus ring cyan, and a11y ≥95. If OK, set gate to PASS in docs/qa/gates/1.6-digit-keys-cyan-background.yml. If issues exist, list fixes and set CONCERNS/FAIL.
 
 ============ QA - GATES ============
 
-@qa.mdc *gates @1.6.digit-keys-cyan-background.md 
+@qa.mdc \*gates @1.6.digit-keys-cyan-background.md
 
 Review the final implementation. Confirm digits and decimal use cyan, operators/actions unchanged, focus ring cyan, and a11y ≥95. If OK, set gate to PASS in docs/qa/gates/1.6-digit-keys-cyan-background.yml. If issues exist, list fixes and set CONCERNS/FAIL.
